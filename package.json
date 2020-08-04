@@ -1,32 +1,7 @@
 {
   "name": "depthy",
   "version": "0.0.0",
-  "dependencies": {
-    "es6-promise": "4.2.8",
-    "@bower_components/angular": "angular/bower-angular#1.2.32",
-    "@bower_components/angular-animate": "angular/bower-angular-animate#~1.2.16",
-    "@bower_components/angular-ga": "panrafal/angular-ga#~0.1.0",
-    "@bower_components/angular-mocks": "angular/bower-angular-mocks#1.2.15",
-    "@bower_components/angular-motion": "mgcrea/angular-motion#~0.3.2",
-    "@bower_components/angular-sanitize": "angular/bower-angular-sanitize#~1.2.16",
-    "@bower_components/angular-scenario": "angular/bower-angular-scenario#1.2.15",
-    "@bower_components/angular-strap": "mgcrea/angular-strap#~2.0.1",
-    "@bower_components/angular-touch": "angular/bower-angular-touch#~1.2.16",
-    "@bower_components/angular-ui-bootstrap": "angular-ui/bootstrap#~0.11.0",
-    "@bower_components/angular-ui-router": "angular-ui/angular-ui-router-bower#~0.2.10",
-    "@bower_components/bootstrap": "twbs/bootstrap#^3.2.0",
-    "@bower_components/bootstrap-sass-official": "twbs/bootstrap-sass#~3.1.0",
-    "@bower_components/gif.js": "panrafal/gif.js#master",
-    "@bower_components/is-jpg": "sindresorhus/is-jpg#~0.1.2",
-    "@bower_components/is-png": "sindresorhus/is-png#~0.1.1",
-    "@bower_components/iscroll": "cubiq/iscroll#~5.1.1",
-    "@bower_components/jquery": "jquery/jquery-dist#~1.11.0",
-    "@bower_components/lodash": "lodash/lodash#~2.4.1",
-    "@bower_components/pixi.js": "panrafal/pixi.js#build/depthy",
-    "@bower_components/screenfull": "sindresorhus/screenfull.js#~1.2.1",
-    "@bower_components/stats.js": "mrdoob/stats.js#*",
-    "@bower_components/whammy": "antimatter15/whammy#*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-angular-templates": "~0.5.4",
@@ -39,7 +14,7 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-htmlmin": "~0.3.0",
-    "grunt-contrib-imagemin": "~0.7.0",
+    "grunt-contrib-imagemin": "~7.0.1",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "~0.6.1",
@@ -62,11 +37,9 @@
     "karma-chrome-launcher": "~0.1.4"
   },
   "engines": {
-    "node": ">=0.10.0",
-    "yarn": ">= 1.0.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test",
-    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'app\\bower_components', 'junction') } catch (e) { }\""
+    "test": "grunt test"
   }
 }
