@@ -10,16 +10,26 @@ ADD sources.list /etc/apt/
 
 RUN apt-get update
 RUN apt-get install -y git
-RUN apt-get install -y nodejs npm ruby-compass
+RUN apt-get install -y curl
 
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+RUN apt install -y nodejs
+# RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs
+
+RUN apt-get install -y ruby-compass
+
+RUN npm config set registry http://registry.npmjs.org/
+RUN mkdir "${HOME}/.npm-global"
+RUN npm config set prefix "${HOME}/.npm-global"
+ENV PATH="/root/.npm-global/bin:$PATH"
+
 RUN npm install -g grunt-cli bower
 
-RUN git clone https://github.com/panrafal/depthy.git
+RUN git clone https://github.com/TheTechWalrus/depthy.git
 WORKDIR /depthy
 RUN npm install
 RUN bower install --allow-root --config.interactive=false
 
 EXPOSE 9000 
 ENTRYPOINT grunt serve
-
