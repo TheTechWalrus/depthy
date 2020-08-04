@@ -40,8 +40,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test",
-	"preinstall": "npx npm-force-resolutions"
+    "test": "grunt test"
   },
   "resolutions": {
     "graceful-fs": "4.2.4"
