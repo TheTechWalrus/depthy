@@ -33,11 +33,11 @@ ENV PATH="/root/.npm-global/bin:$PATH"
 
 RUN npm install -g grunt-cli bower
 
-RUN git clone https://github.com/TheTechWalrus/depthy.git && echo "ab"
+RUN git clone https://github.com/TheTechWalrus/depthy.git && echo "ae"
 WORKDIR /depthy
 RUN npm install
 RUN bower install --allow-root --config.interactive=false
 
 RUN echo $(npm ls gulp) && echo "ff"
 EXPOSE 9000 
-ENTRYPOINT grunt serve
+ENTRYPOINT grunt serve --force
